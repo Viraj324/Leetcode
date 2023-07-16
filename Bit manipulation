@@ -1,0 +1,61 @@
+import java.util.*;
+
+public class Bits{
+    public static void main(String[] args) {
+
+
+/*  --------------------------Get Bit---------------------    
+    int n = 5;
+        int pos = 2;
+        int bitMask = 1<<2;
+
+        if((bitMask & n) == 0){
+            System.out.println("Bit was Zero...");
+        }
+        else{
+            System.out.println("Bit was one....");
+        }*/
+
+/*
+ * -------------------------Set Bit-----------------------
+ *      int n = 5;
+        int pos = 1;
+        int bitMask = 1 << pos;
+        int num = bitMask | n;
+        System.out.println(num); 
+ */
+
+/*
+ * -------------------------Clear Bits--------------------
+ *      int n = 5;
+        int position = 2;
+        int bitMask = 1 << position;
+        int inverted  = ~(bitMask);
+        int ans = inverted & n;
+        System.out.println(ans);
+ * 
+ */
+
+ /*
+  * 
+  */
+
+        Scanner sc  = new Scanner(System.in);
+        System.out.println("Enter the Bits to be changed either 0 or 1 : ");
+        int oper = sc.nextInt();
+        int n = 5;
+        int pos = 1;
+        int bitMask = 1<<pos;
+        if(oper == 1){
+            int num = bitMask | n;
+            System.out.println(num); 
+        }
+        if(oper == 0){
+            int inverted  = ~(bitMask);
+            int ans = inverted & n;
+            System.out.println(ans);
+        }
+        
+
+    } 
+}
