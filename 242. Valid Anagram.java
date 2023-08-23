@@ -53,3 +53,26 @@ class Solution {
         return true;
     }
 }
+---------------------------------------------------------------------------------------------------------
+ //Approach 2
+ class Solution {
+    public boolean isAnagram(String s, String t) {
+        if(s.length() != t.length()){
+             return false;
+        }
+        String s1 = sort1(s);
+        String s2 = sort1(t);
+
+        for(int i = 0;i<s1.length();i++){
+            if(s1.charAt(i)!=s2.charAt(i)){
+                return false;
+            }
+        }
+        return true;
+    }
+    public String sort1(String s){
+        char c[] = s.toCharArray();
+        Arrays.sort(c);
+        return new String(c);
+    }
+}
